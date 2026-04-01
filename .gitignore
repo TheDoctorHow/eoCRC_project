@@ -1,0 +1,28 @@
+# R binary data objects (large — download via curatedMetagenomicData)
+*.rds
+*.rda
+.RData
+.Rhistory
+.Rproj.user/
+
+# Project-local Claude instructions
+CLAUDE.md
+
+# Development/exploratory script (not part of main pipeline)
+scripts/step4b_shap_extended.R
+step4b_shap_extended.R
+
+# Old MaAsLin2 results (broken CLR — superseded by maaslin2_results_v3/)
+maaslin2_results/
+maaslin2_results_v2/
+
+# Temporary / job output
+loso_cv_.output
+/tmp/
+*.log
+*.err
+*.out
+
+# Large raw data CSVs (reconstructed by running step1)
+species_filtered.csv
+path_filtered.csv

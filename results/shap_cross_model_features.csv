@@ -1,0 +1,17 @@
+"feature","in_ext","in_sp_only","in_pa_only","in_maaslin","n_analyses"
+"species:Bacteroides caccae",TRUE,TRUE,FALSE,TRUE,2
+"species:Bacteroides cellulosilyticus",TRUE,TRUE,FALSE,FALSE,2
+"species:Lachnospira eligens",TRUE,TRUE,FALSE,FALSE,2
+"species:Bacteroides ovatus",TRUE,TRUE,FALSE,FALSE,2
+"species:Peptostreptococcus stomatis",TRUE,FALSE,FALSE,TRUE,1
+"species:Gemella morbillorum",TRUE,FALSE,FALSE,TRUE,1
+"species:Parvimonas micra",TRUE,FALSE,FALSE,TRUE,1
+"species:Dialister pneumosintes",TRUE,FALSE,FALSE,TRUE,1
+"species:Alistipes finegoldii",TRUE,FALSE,FALSE,TRUE,1
+"species:Anaerotruncus colihominis",TRUE,FALSE,FALSE,TRUE,1
+"species:[Clostridium] symbiosum",TRUE,FALSE,FALSE,TRUE,1
+"PWY-6263: superpathway of menaquinol-8 biosynthesis II",FALSE,FALSE,TRUE,TRUE,1
+"PWY-5850: superpathway of menaquinol-6 biosynthesis I",FALSE,FALSE,TRUE,TRUE,1
+"PWY-6285: superpathway of fatty acids biosynthesis (E. coli)",FALSE,FALSE,TRUE,TRUE,1
+"PWY-6113: superpathway of mycolate biosynthesis",FALSE,FALSE,TRUE,TRUE,1
+"PWY-5971: palmitate biosynthesis II (bacteria and plants)",FALSE,FALSE,TRUE,TRUE,1
