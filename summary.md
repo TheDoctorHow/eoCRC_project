@@ -1,6 +1,6 @@
 # eoCRC Microbiome Meta-Analysis - Results Summary
 
-**Date:** 2026-03-30
+**Date:** 2026-04-02
 **Institution:** University of Texas at Dallas (UTD)
 **Pipeline:** curatedMetagenomicData v3 -> MaAsLin2 -> LOSO-CV -> SHAP
 
@@ -37,33 +37,33 @@
 
 \---
 
-## 3\. MaAsLin2 Differential Abundance
+## 3\. MaAsLin2 Differential Abundance (v3 — corrected CLR via compositions::clr, pseudocount=1e-6)
 
-### eoCRC vs Young Controls - Species (q<0.25, total n=10)
+### eoCRC vs Young Controls - Species (q<0.25, total n=47, top 10 shown)
 
-1. Blautia obeum (up eoCRC, q=0.0496)
-2. Parvimonas micra (up eoCRC, q=0.0496)
-3. Gemella morbillorum (up eoCRC, q=0.0840)
-4. Bacteroides caccae (up eoCRC, q=0.1493)
-5. Alistipes indistinctus (up eoCRC, q=0.1493)
-6. Dialister pneumosintes (up eoCRC, q=0.1493)
-7. Clostridium  symbiosum (up eoCRC, q=0.1799)
-8. Alistipes finegoldii (up eoCRC, q=0.2037)
-9. Peptostreptococcus stomatis (up eoCRC, q=0.2037)
-10. Anaerotruncus colihominis (up eoCRC, q=0.2378)
+1. Parvimonas micra (up eoCRC, coef=1.002, q<0.001)
+2. Gemella morbillorum (up eoCRC, coef=0.721, q<0.001)
+3. Peptostreptococcus stomatis (up eoCRC, coef=0.745, q<0.001)
+4. Anaerotruncus colihominis (up eoCRC, coef=0.706, q=0.0036)
+5. Dialister pneumosintes (up eoCRC, coef=0.512, q=0.0036)
+6. Monoglobus pectinilyticus (down eoCRC, coef=-0.623, q=0.0049)
+7. Romboutsia ilealis (down eoCRC, coef=-0.341, q=0.0126)
+8. Bacteroides cellulosilyticus (up eoCRC, coef=0.904, q=0.0156)
+9. Turicimonas muris (down eoCRC, coef=-0.513, q=0.0244)
+10. Intestinimonas butyriciproducens (up eoCRC, coef=0.597, q=0.0245)
 
-### eoCRC vs Young Controls - Pathways (q<0.25, total n=95)
+### eoCRC vs Young Controls - Pathways (q<0.25, total n=87, top 10 shown)
 
-1. P108 PWY  pyruvate fermentation to propanoate I (up eoCRC, q=0.0028)
-2. THISYNARA PWY  superpathway of thiamin diphosphate biosynthesis III  eukaryotes  (down eoCRC, q=0.0500)
-3. PWYG 321  mycolate biosynthesis (up eoCRC, q=0.0545)
-4. PWY 1042  glycolysis IV  plant cytosol  (down eoCRC, q=0.0751)
-5. PWY 6151  S adenosyl L methionine cycle I (down eoCRC, q=0.0751)
-6. PWY 7234  inosine 5  phosphate biosynthesis III (up eoCRC, q=0.0751)
-7. PWY 5989  stearate biosynthesis II  bacteria and plants  (up eoCRC, q=0.0751)
-8. P42 PWY  incomplete reductive TCA cycle (up eoCRC, q=0.0751)
-9. PWY 6703  preQ0 biosynthesis (down eoCRC, q=0.0803)
-10. PPGPPMET PWY  ppGpp biosynthesis (up eoCRC, q=0.0803)
+1. P108-PWY: pyruvate fermentation to propanoate I (up eoCRC, q=0.0051)
+2. PWY-6588: pyruvate fermentation to acetone (up eoCRC, q=0.0306)
+3. TRPSYN-PWY: L-tryptophan biosynthesis (down eoCRC, q=0.0412)
+4. PWY-1042: glycolysis IV (plant cytosol) (down eoCRC, q=0.0421)
+5. PWY-6151: S-adenosyl-L-methionine cycle I (down eoCRC, q=0.0421)
+6. PWY-6936: seleno-amino acid biosynthesis (down eoCRC, q=0.0421)
+7. THISYNARA-PWY: superpathway of thiamin diphosphate biosynthesis III (down eoCRC, q=0.0421)
+8. GLUCUROCAT-PWY: beta-D-glucuronide and D-glucuronate degradation (down eoCRC, q=0.0421)
+9. RHAMCAT-PWY: L-rhamnose degradation I (down eoCRC, q=0.0421)
+10. P163-PWY: L-lysine fermentation to acetate and butanoate (up eoCRC, q=0.0421)
 
 ### loCRC vs Older Controls - Species (q<0.25, total n=100)
 
@@ -82,41 +82,42 @@
 
 ## 4\. SHAP Top 20 Features (Extended Combined RF, top-200)
 
-\[star] = Doubly validated in both SHAP and MaAsLin2 (q<0.25)
+\[star] = Doubly validated in both SHAP and MaAsLin2 v3 (q<0.25) | MaAsLin2 direction shown in parentheses
 
-1. Peptostreptococcus stomatis                   | ↓ eoCRC | q=0.2037 \[star]
-2. Gemella morbillorum                           | ↑ eoCRC | q=0.0840 \[star]
-3. Parvimonas micra                              | ↓ eoCRC | q=0.0496 \[star]
-4. Intestinimonas butyriciproducens              | ↓ eoCRC | q=NA
-5. Dialister pneumosintes                        | ↑ eoCRC | q=0.1493 \[star]
-6. Faecalibacterium prausnitzii                  | ↑ eoCRC | q=NA
-7. Lactobacillus rogosae                         | ↑ eoCRC | q=NA
-8. Alistipes finegoldii                          | ↓ eoCRC | q=0.2037 \[star]
-9. Bacteroides faecis                            | ↓ eoCRC | q=NA
-10. Intestinibacter bartlettii                    | ↑ eoCRC | q=NA
-11. Anaerotruncus colihominis                     | ↓ eoCRC | q=0.2378 \[star]
-12. Proteobacteria bacterium CAG:139              | ↓ eoCRC | q=NA
-13. Parabacteroides goldsteinii                   | ↓ eoCRC | q=NA
-14. Bacteroides cellulosilyticus                  | ↓ eoCRC | q=NA
-15. Lachnospira eligens                           | ↑ eoCRC | q=NA
-16. Bacteroides caccae                            | ↓ eoCRC | q=0.1493 \[star]
-17. Eubacterium sp. CAG:274                       | ↑ eoCRC | q=NA
-18. Bacteroides ovatus                            | ↑ eoCRC | q=NA
-19. Turicimonas muris                             | ↓ eoCRC | q=NA
-20. \[Clostridium] symbiosum                       | ↑ eoCRC | q=0.1799 \[star]
+1. Peptostreptococcus stomatis                   | SHAP ↓ eoCRC | q<0.001 (up eoCRC) \[star]
+2. Gemella morbillorum                           | SHAP ↑ eoCRC | q<0.001 (up eoCRC) \[star]
+3. Parvimonas micra                              | SHAP ↓ eoCRC | q<0.001 (up eoCRC) \[star]
+4. Intestinimonas butyriciproducens              | SHAP ↓ eoCRC | q=0.0245 (up eoCRC) \[star]
+5. Dialister pneumosintes                        | SHAP ↑ eoCRC | q=0.0036 (up eoCRC) \[star]
+6. Faecalibacterium prausnitzii                  | SHAP ↑ eoCRC | q=0.0822 (down eoCRC) \[star]
+7. Lactobacillus rogosae                         | SHAP ↑ eoCRC | q=0.0780 (down eoCRC) \[star]
+8. Alistipes finegoldii                          | SHAP ↓ eoCRC | q=0.2108 (up eoCRC) \[star]
+9. Bacteroides faecis                            | SHAP ↓ eoCRC | q=NA
+10. Intestinibacter bartlettii                    | SHAP ↑ eoCRC | q=NA
+11. Anaerotruncus colihominis                     | SHAP ↓ eoCRC | q=0.0036 (up eoCRC) \[star]
+12. Proteobacteria bacterium CAG:139              | SHAP ↓ eoCRC | q=NA
+13. Parabacteroides goldsteinii                   | SHAP ↓ eoCRC | q=NA
+14. Bacteroides cellulosilyticus                  | SHAP ↓ eoCRC | q=0.0156 (up eoCRC) \[star]
+15. Lachnospira eligens                           | SHAP ↑ eoCRC | q=NA
+16. Bacteroides caccae                            | SHAP ↓ eoCRC | q=0.1817 (up eoCRC) \[star]
+17. Eubacterium sp. CAG:274                       | SHAP ↑ eoCRC | q=NA
+18. Bacteroides ovatus                            | SHAP ↑ eoCRC | q=NA
+19. Turicimonas muris                             | SHAP ↓ eoCRC | q=0.0244 (down eoCRC) \[star]
+20. \[Clostridium] symbiosum                       | SHAP ↑ eoCRC | q=0.2492 (up eoCRC) \[star]
 
-Doubly validated: 8/20 features
+Doubly validated: 13/20 features (10 enriched in eoCRC, 3 depleted: F. prausnitzii, L. rogosae, T. muris)
 
 \---
 
 ## 5\. Key Biological Findings
 
-* eoCRC carries a detectable gut microbiome signature: species RF AUROC=0.704, perm-p=0.002
-* Signal is geographically consistent (I2=4.5%; 9 cohorts, Europe + East Asia)
-* Enriched in eoCRC: oral pathobionts Parvimonas micra, Gemella morbillorum, Peptostreptococcus stomatis, Dialister pneumosintes
-* Depleted in eoCRC: butyrate producers Intestinimonas butyriciproducens, Lachnospira eligens
-* Signal is primarily taxonomic (species RF p=0.002 vs pathway RF p=0.181 NS)
-* Oral-gut axis hypothesis: ectopic colonic colonization by oral pathobionts promotes tumorigenesis
+* eoCRC carries a detectable gut microbiome signature: species RF AUROC=0.704 (95% CI 0.602–0.789), perm-p=0.002
+* Signal is geographically consistent (I²=4.5%; 9 cohorts, Europe + East Asia)
+* Enriched in eoCRC: oral pathobionts Parvimonas micra, Gemella morbillorum, Peptostreptococcus stomatis, Dialister pneumosintes, Anaerotruncus colihominis; opportunists Bacteroides cellulosilyticus, Bacteroides caccae, Intestinimonas butyriciproducens, Alistipes finegoldii, [Clostridium] symbiosum
+* Depleted in eoCRC: protective commensals Faecalibacterium prausnitzii (major butyrate producer, q=0.082), Lactobacillus rogosae (q=0.078), Turicimonas muris (q=0.024)
+* 13/20 SHAP top features doubly validated against MaAsLin2 v3 (up from 8 with v2 CLR bug)
+* Signal is primarily taxonomic (species RF perm-p=0.002 vs pathway RF perm-p=0.181 NS)
+* Oral-gut axis hypothesis: ectopic colonic colonization by oral pathobionts promotes tumorigenesis; concurrent loss of butyrate producers removes mucosal protection
 
 \---
 
@@ -142,5 +143,5 @@ Doubly validated: 8/20 features
 
 \---
 
-*Generated: 2026-03-30 23:47:12*
+*Generated: 2026-03-30 23:47:12 | Updated: 2026-04-02 (v3 MaAsLin2 corrected CLR)*
 
