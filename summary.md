@@ -1,7 +1,5 @@
 # eoCRC Microbiome Meta-Analysis - Results Summary
 
-**Date:** 2026-04-02
-**Institution:** University of Texas at Dallas (UTD)
 **Pipeline:** curatedMetagenomicData v3 -> MaAsLin2 -> LOSO-CV -> SHAP
 
 \---
@@ -143,5 +141,4 @@ Doubly validated: 13/20 features (10 enriched in eoCRC, 3 depleted: F. prausnitz
 
 \---
 
-*Generated: 2026-03-30 23:47:12 | Updated: 2026-04-02 (v3 MaAsLin2 corrected CLR)*
 
