@@ -200,7 +200,7 @@ Minimum to reproduce main results and figures: **step1 → step2c → step3 → 
 
 ---
 
-## Common errors and fixes
+## Possible errors and fixes
 
 | Error message | Cause | Fix |
 |---|---|---|
