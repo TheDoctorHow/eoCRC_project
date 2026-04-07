@@ -217,9 +217,3 @@ Minimum to reproduce main results and figures: **step1 → step2c → step3 → 
 Step 3 is the bottleneck. It uses `parallel::mclapply` with up to 4 cores automatically — running on a machine with ≥4 cores cuts permutation time roughly by 4×.
 
 ---
-
-## Data provenance
-
-All data are downloaded programmatically from **curatedMetagenomicData v3** (Bioconductor), a uniformly processed public resource (Pasolli et al. 2017, *Nature Methods*). No raw sequencing data need to be downloaded separately. The 9 cohorts are:
-
-`ZellerG_2014`, `FengQ_2015`, `YuJ_2015`, `WirbelJ_2018`, `ThomasAM_2019_c`, `VogtmannE_2016`, `YachidaS_2019`, `GuptaA_2019`, `HanniganGD_2017`
