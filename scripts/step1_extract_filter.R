@@ -5,17 +5,65 @@
 suppressPackageStartupMessages({
   library(SummarizedExperiment)
   library(TreeSummarizedExperiment)
+  library(curatedMetagenomicData)
+  library(dplyr)
 })
 
-setwd("/home/yugiu/eoCRC_analysis")
+# Portable working directory: works whether run from repo root or scripts/
+if (basename(getwd()) == "scripts") setwd("..")
 
 cat("=== Step 1: Data Extraction & Prevalence Filtering ===\n\n")
 
-# ── Load objects ──────────────────────────────────────────────────────────────
-cat("Loading RDS objects...\n")
-tse_full  <- readRDS("tse_relabund_full.rds")
-tse_path  <- readRDS("tse_pathways_full.rds")
-meta      <- readRDS("all_samples_metadata.rds")
+COHORTS <- c("ZellerG_2014", "FengQ_2015", "YuJ_2015", "WirbelJ_2018",
+             "ThomasAM_2019_c", "VogtmannE_2016", "YachidaS_2019",
+             "GuptaA_2019", "HanniganGD_2017")
+
+# ── Download from curatedMetagenomicData (or load from cache) ─────────────────
+if (file.exists("tse_relabund_full.rds") &&
+    file.exists("tse_pathways_full.rds") &&
+    file.exists("all_samples_metadata.rds")) {
+
+  cat("Cache found — loading RDS files from disk...\n")
+  tse_full <- readRDS("tse_relabund_full.rds")
+  tse_path <- readRDS("tse_pathways_full.rds")
+  meta     <- readRDS("all_samples_metadata.rds")
+
+} else {
+
+  cat("No cache — downloading from curatedMetagenomicData v3...\n")
+
+  meta_cmd <- sampleMetadata |>
+    filter(study_name %in% COHORTS,
+           study_condition %in% c("CRC", "control"),
+           !is.na(age))
+
+  cat(sprintf("  %d samples matched across %d cohorts\n",
+              nrow(meta_cmd), length(unique(meta_cmd$study_name))))
+
+  cat("  Downloading relative_abundance (this may take several minutes)...\n")
+  tse_full <- returnSamples(meta_cmd, "relative_abundance", rownames = "short")
+
+  cat("  Downloading pathway_abundance...\n")
+  tse_path <- returnSamples(meta_cmd, "pathway_abundance", rownames = "short")
+
+  # Build metadata data frame matching downstream expectations
+  cd <- as.data.frame(colData(tse_full))
+  meta <- data.frame(
+    sample_id       = colnames(tse_full),
+    study_name      = cd$study_name,
+    age             = cd$age,
+    study_condition = cd$study_condition,          # "CRC" or "control"
+    group           = cd$study_condition,           # alias used in downstream scripts
+    age_group       = ifelse(cd$age < 50, "early_onset", "late_onset"),
+    stringsAsFactors = FALSE
+  )
+
+  cat("  Saving cache files for future runs...\n")
+  saveRDS(tse_full, "tse_relabund_full.rds")
+  saveRDS(tse_path, "tse_pathways_full.rds")
+  saveRDS(meta,     "all_samples_metadata.rds")
+  cat("  Cache saved.\n")
+}
 
 cat("  tse_relabund_full dim:", paste(dim(tse_full),  collapse=" x "), "\n")
 cat("  tse_pathways_full dim:", paste(dim(tse_path),  collapse=" x "), "\n")
