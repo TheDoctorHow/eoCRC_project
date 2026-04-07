@@ -153,15 +153,15 @@ cat(sprintf("Pathway matrix:  %d samples x %d pathways (unstratified) → %d pat
             nrow(path_mat), ncol(path_mat), ncol(path_filtered)))
 
 # Key taxa check
-key_taxa <- c("Fusobacterium_nucleatum", "Peptostreptococcus_anaerobius",
-              "Escherichia_coli", "Faecalibacterium_prausnitzii")
+key_taxa <- c("Fusobacterium nucleatum", "Peptostreptococcus anaerobius",
+              "Escherichia coli", "Faecalibacterium prausnitzii")
 cat("\nKey taxa in filtered matrix:\n")
 for (tx in key_taxa) {
-  match <- grep(tx, colnames(species_filtered), value=TRUE)
+  match <- grep(tx, colnames(species_filtered), value=TRUE, fixed=TRUE)
   if (length(match) > 0) {
-    cat(sprintf("  ✓ %s → %s\n", tx, paste(match, collapse=", ")))
+    cat(sprintf("  \u2713 %s\n", match))
   } else {
-    cat(sprintf("  ✗ %s — NOT found (may be filtered out or name differs)\n", tx))
+    cat(sprintf("  \u2717 %s \u2014 not in filtered set (prevalence < 10%%)\n", tx))
   }
 }
 
