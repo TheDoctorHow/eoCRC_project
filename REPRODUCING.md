@@ -223,18 +223,6 @@ Minimum to reproduce main results and figures: **step1 → step2c → step3 → 
 | `cairo_pdf` not found | Cairo graphics not available | Install: `install.packages("Cairo")` or use `pdf()` fallback |
 | Step1 very slow (>30 min) | curatedMetagenomicData downloads each cohort separately | Normal for first run; subsequent runs use cache |
 
----
-
-## Approximate total runtime
-
-| Step | Runtime |
-|------|---------|
-| Step 1 (first run, downloads ~500 MB) | 15–30 min |
-| Step 2c (MaAsLin2, 6 models) | 10–20 min |
-| Step 3 (LOSO-CV + 1000 permutations) | 2–4 hours |
-| Step 4 (SHAP, nsim=100) | 20–45 min |
-| Step 5 (figures) | 5–15 min |
-| **Total** | **~3–6 hours** |
 
 Step 3 is the bottleneck. It uses `parallel::mclapply` with up to 4 cores automatically — running on a machine with ≥4 cores cuts permutation time roughly by 4×.
 
