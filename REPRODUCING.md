@@ -61,8 +61,6 @@ Rscript scripts/step1_extract_filter.R
 
 **What it does:** Downloads relative abundance and pathway abundance profiles for 9 CRC cohorts from curatedMetagenomicData v3 (Bioconductor), applies a ≥10% prevalence filter, and saves filtered matrices.
 
-**Runtime:** 15–30 minutes (depends on internet speed; downloads ~500 MB)
-
 **Expected outputs:**
 
 | File | Description | Approx. size |
@@ -93,8 +91,6 @@ Rscript scripts/step2c_maaslin2_v3.R
 
 **Requires:** Output from Step 1.
 
-**Runtime:** ~10–20 minutes (6 MaAsLin2 models, 4 cores each)
-
 **Expected outputs:**
 
 | File/Dir | Description |
@@ -118,8 +114,6 @@ Rscript scripts/step3_loso_cv.R
 **What it does:** Leave-One-Study-Out cross-validation with three models (Random Forest, XGBoost, ElasticNet), three feature sets (species, pathways, combined), permutation test (1000 shuffles), and learning curves. Primary: eoCRC vs Young Controls. Secondary: eoCRC vs loCRC.
 
 **Requires:** Output from Step 1.
-
-**Runtime:** 2–4 hours (dominated by 1000-permutation null distribution; uses up to 4 cores automatically)
 
 **Expected outputs:**
 
@@ -149,8 +143,6 @@ Rscript scripts/step4_shap.R
 
 **Requires:** Output from Step 1. (MaAsLin2 results are read from `maaslin2_results_v2/` for the cross-reference step — run Step 2b if you need this cross-reference, otherwise the main SHAP computation still runs.)
 
-**Runtime:** 20–45 minutes
-
 **Expected outputs:**
 
 | File | Description |
@@ -175,8 +167,6 @@ Rscript scripts/step5_figures.R
 **What it does:** Generates all 7 presentation figures plus a `summary.md` report.
 
 **Requires:** Outputs from Steps 1, 3, and 4.
-
-**Runtime:** 5–15 minutes
 
 **Expected outputs in `figures/`:** All PNG (300 dpi) + PDF pairs for figures 1–7.
 
