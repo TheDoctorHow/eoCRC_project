@@ -1,32 +1,32 @@
-organism	protein	uniprot_id	role	source_pmid
-Homo sapiens	ERBB2	P04626	host_oncogenic_receptor	NA
-Homo sapiens	KRAS	P01116	MAPK_cascade_node	NA
-Homo sapiens	MAP2K1	Q02750	MAPK_cascade_node	NA
-Homo sapiens	MAPK3	P27361	MAPK_cascade_node	NA
-Homo sapiens	MAPK1	P28482	MAPK_cascade_node	NA
-Homo sapiens	RELA	Q04206	NF-kB_axis_node	NA
-Homo sapiens	NFKB1	P19838	NF-kB_axis_node	NA
-Homo sapiens	IKBKB	O14920	NF-kB_axis_node	NA
-Homo sapiens	CEBPB	P17676	inflammation_TF	NA
-Homo sapiens	SAA1	NA	acute_phase_protein	NA
-Homo sapiens	IL17C	NA	proinflammatory_cytokine	NA
-Homo sapiens	CXCL8	P10145	chemokine	NA
-Homo sapiens	CXCR1	P25024	chemokine_receptor	NA
-Homo sapiens	CXCR2	P25025	chemokine_receptor	NA
-Homo sapiens	DNMT1	P26358	epigenetic_methyltransferase	NA
-Homo sapiens	DNMT3A	Q9Y6K1	epigenetic_methyltransferase	NA
-Homo sapiens	DNMT3B	Q9UBC3	epigenetic_methyltransferase	NA
-Homo sapiens	APC	P25054	tumor_suppressor	NA
-Homo sapiens	MLH1	P40692	DNA_mismatch_repair	NA
-Homo sapiens	CDKN2A	P42771	cell_cycle_inhibitor	NA
-Homo sapiens	H2BC4	NA	histone_H2B_variant	NA
-Parvimonas micra	SirTM	NA	bacterial_sirtuin_effector	NA
-Parvimonas stomatis	LPS_biosynthesis_enzyme	NA	bacterial_LPS_structural_placeholder	NA
-Parvimonas stomatis	adhesin	NA	bacterial_adhesin_placeholder	NA
-Gemella morbillorum	LPS_biosynthesis_enzyme	NA	bacterial_LPS_structural_placeholder	NA
-Gemella morbillorum	adhesin	NA	bacterial_adhesin_placeholder	NA
-Dialister pneumosintes	LPS_biosynthesis_enzyme	NA	bacterial_LPS_structural_placeholder	NA
-Dialister pneumosintes	adhesin	NA	bacterial_adhesin_placeholder	NA
+organism	protein	uniprot_id	ncbi_protein_id	locus_tag	role	source_pmid	notes
+Homo sapiens	ERBB2	P04626	NA	NA	host_oncogenic_receptor	NA	NA
+Homo sapiens	KRAS	P01116	NA	NA	MAPK_cascade_node	NA	NA
+Homo sapiens	MAP2K1	Q02750	NA	NA	MAPK_cascade_node	NA	NA
+Homo sapiens	MAPK3	P27361	NA	NA	MAPK_cascade_node	NA	NA
+Homo sapiens	MAPK1	P28482	NA	NA	MAPK_cascade_node	NA	NA
+Homo sapiens	RELA	Q04206	NA	NA	NF-kB_axis_node	NA	NA
+Homo sapiens	NFKB1	P19838	NA	NA	NF-kB_axis_node	NA	NA
+Homo sapiens	IKBKB	O14920	NA	NA	NF-kB_axis_node	NA	NA
+Homo sapiens	CEBPB	P17676	NA	NA	inflammation_TF	NA	NA
+Homo sapiens	SAA1	NA	NA	NA	acute_phase_protein	NA	NA
+Homo sapiens	IL17C	NA	NA	NA	proinflammatory_cytokine	NA	NA
+Homo sapiens	CXCL8	P10145	NA	NA	chemokine	NA	NA
+Homo sapiens	CXCR1	P25024	NA	NA	chemokine_receptor	NA	NA
+Homo sapiens	CXCR2	P25025	NA	NA	chemokine_receptor	NA	NA
+Homo sapiens	DNMT1	P26358	NA	NA	epigenetic_methyltransferase	NA	NA
+Homo sapiens	DNMT3A	Q9Y6K1	NA	NA	epigenetic_methyltransferase	NA	NA
+Homo sapiens	DNMT3B	Q9UBC3	NA	NA	epigenetic_methyltransferase	NA	NA
+Homo sapiens	APC	P25054	NA	NA	tumor_suppressor	NA	NA
+Homo sapiens	MLH1	P40692	NA	NA	DNA_mismatch_repair	NA	NA
+Homo sapiens	CDKN2A	P42771	NA	NA	cell_cycle_inhibitor	NA	NA
+Homo sapiens	H2BC4	NA	NA	NA	histone_H2B_variant	NA	NA
+Parvimonas micra	SirTM	NA	WP_029950202.1	T262_RS0106475	bacterial_effector_ADP-ribosyltransferase	41850426	WP_029950202.1 (locus tag T262_RS0106475 in P. micra strain A293) is the reference strain ortholog of Gene_1539 in P. micra strain Pm-42, which was experimentally characterized by Chang et al. 2026 as an ADP-ribosyltransferase (SirTM) that modifies histone H2B in human colonocytes and drives colorectal cancer progression via the CEBPβ/SAA1/IL-17C pathway. Gene identity confirmed by exact match of forward qPCR primer 1539-F within the CDS and 20/22 match of reverse primer 1539-R within the CDS (primers from Chang et al. Supplementary Table S1). The protein is 97.9-100% conserved at the amino acid level across assembled P. micra strains (BLAST vs nr). Note: NCBI auto-annotation labels this protein as a SIR2-family deacylase based on domain prediction, but Chang et al. demonstrated experimentally that it lacks deacetylase activity and functions solely as an ADP-ribosyltransferase (Chang et al. 2026, Figure 5C).
+Parvimonas stomatis	LPS_biosynthesis_enzyme	NA	NA	NA	bacterial_LPS_structural_placeholder	NA	NA
+Parvimonas stomatis	adhesin	NA	NA	NA	bacterial_adhesin_placeholder	NA	NA
+Gemella morbillorum	LPS_biosynthesis_enzyme	NA	NA	NA	bacterial_LPS_structural_placeholder	NA	NA
+Gemella morbillorum	adhesin	NA	NA	NA	bacterial_adhesin_placeholder	NA	NA
+Dialister pneumosintes	LPS_biosynthesis_enzyme	NA	NA	NA	bacterial_LPS_structural_placeholder	NA	NA
+Dialister pneumosintes	adhesin	NA	NA	NA	bacterial_adhesin_placeholder	NA	NA
 # --- UNCERTAIN / FLAGGED ENTRIES ---
 # SAA1 (Homo sapiens): UniProt left as NA. Candidate accessions are P0DJI8 and P02763
 #   (both annotated as SAA1_HUMAN in different UniProt releases); verify current
@@ -40,18 +40,12 @@ Dialister pneumosintes	adhesin	NA	bacterial_adhesin_placeholder	NA
 #   "H2B variants" may refer to multiple paralogs (H2BC4, H2BC5, H2BC11, etc.).
 #   Expand to full variant list and verify accessions before PPI queries.
 #
-# SirTM (Parvimonas micra): Protein class (bacterial sirtuin / SirTM) is documented in
-#   anaerobic bacteria but a P. micra-specific UniProt entry has not been verified.
-#   Search UniProt with taxon "Parvimonas micra" + keyword "sirtuin" to find the
-#   correct accession. Source PMID also left as NA — candidate literature includes
-#   Rack et al. on bacterial sirtuins, but PMID not confirmed.
-#
 # Bacterial LPS/adhesin placeholders (P. stomatis, G. morbillorum, D. pneumosintes):
 #   All three entries are scaffolds only. Specific gene products (e.g. FadA-like
 #   adhesins, Lpx-family LPS enzymes) must be identified via genome annotation
-#   (NCBI RefSeq) and literature before UniProt IDs or PMIDs can be filled in.
+#   (NCBI RefSeq) and literature before ncbi_protein_id or source_pmid can be filled in.
 #
-# All source_pmid fields set to NA: a systematic PubMed search linking each host
-#   protein to eoCRC/CRC and to the four bacterial species is required. Starting
-#   points: Flemer et al. 2018 (P. micra CRC association), Drewes et al. 2022
-#   (eoCRC microbiome), and per-gene CRC literature.
+# All source_pmid fields for human proteins set to NA: a systematic PubMed search
+#   linking each host protein to eoCRC/CRC and to the four bacterial species is
+#   required. Starting points: Chang et al. 2026 (PMID 41850426, P. micra SirTM CRC),
+#   Drewes et al. 2022 (eoCRC microbiome), and per-gene CRC literature.
