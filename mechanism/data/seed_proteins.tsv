@@ -13,6 +13,8 @@ Homo sapiens	IL17C	NA	NA	NA	proinflammatory_cytokine	NA	NA
 Homo sapiens	CXCL8	P10145	NA	NA	chemokine	NA	NA
 Homo sapiens	CXCR1	P25024	NA	NA	chemokine_receptor	NA	NA
 Homo sapiens	CXCR2	P25025	NA	NA	chemokine_receptor	NA	NA
+Homo sapiens	ITGA6	P23229	NA	NA	host_integrin_receptor	39059397	Integrin alpha-6; reviewed Swiss-Prot, 1130 aa. Direct binding partner of P. stomatis FBA on colonocyte surface; bridges bacterial adhesin to ERBB2 activation (Huang et al. 2024).
+Homo sapiens	ITGB4	P16144	NA	NA	host_integrin_receptor	39059397	Integrin beta-4; reviewed Swiss-Prot, 1822 aa. Direct binding partner of P. stomatis FBA on colonocyte surface; bridges bacterial adhesin to ERBB2 activation (Huang et al. 2024).
 Homo sapiens	DNMT1	P26358	NA	NA	epigenetic_methyltransferase	NA	NA
 Homo sapiens	DNMT3A	Q9Y6K1	NA	NA	epigenetic_methyltransferase	NA	NA
 Homo sapiens	DNMT3B	Q9UBC3	NA	NA	epigenetic_methyltransferase	NA	NA
@@ -21,8 +23,7 @@ Homo sapiens	MLH1	P40692	NA	NA	DNA_mismatch_repair	NA	NA
 Homo sapiens	CDKN2A	P42771	NA	NA	cell_cycle_inhibitor	NA	NA
 Homo sapiens	H2BC4	NA	NA	NA	histone_H2B_variant	NA	NA
 Parvimonas micra	SirTM	NA	WP_029950202.1	T262_RS0106475	bacterial_effector_ADP-ribosyltransferase	41850426	WP_029950202.1 (locus tag T262_RS0106475 in P. micra strain A293) is the reference strain ortholog of Gene_1539 in P. micra strain Pm-42, which was experimentally characterized by Chang et al. 2026 as an ADP-ribosyltransferase (SirTM) that modifies histone H2B in human colonocytes and drives colorectal cancer progression via the CEBPβ/SAA1/IL-17C pathway. Gene identity confirmed by exact match of forward qPCR primer 1539-F within the CDS and 20/22 match of reverse primer 1539-R within the CDS (primers from Chang et al. Supplementary Table S1). The protein is 97.9-100% conserved at the amino acid level across assembled P. micra strains (BLAST vs nr). Note: NCBI auto-annotation labels this protein as a SIR2-family deacylase based on domain prediction, but Chang et al. demonstrated experimentally that it lacks deacetylase activity and functions solely as an ADP-ribosyltransferase (Chang et al. 2026, Figure 5C).
-Parvimonas stomatis	LPS_biosynthesis_enzyme	NA	NA	NA	bacterial_LPS_structural_placeholder	NA	NA
-Parvimonas stomatis	adhesin	NA	NA	NA	bacterial_adhesin_placeholder	NA	NA
+Peptostreptococcus stomatis	FBA	E0E2E9	EFM64912.1	HMPREF0634_1279	bacterial_adhesin_surface_moonlighting	39059397	Fructose-1,6-bisphosphate aldolase class II (gene fba); 307 aa; unreviewed TrEMBL. Surface-displayed moonlighting glycolytic enzyme that acts as the sole characterized virulence factor of P. stomatis. Binds human integrins ITGA6/ITGB4 on colonocyte surface, activating ERBB2-MEK-ERK-p90RSK signaling and driving CRC progression and RTK-inhibitor resistance. Strain: DSM 17678 (HMP draft genome, BioProject PRJNA34073). Full cascade: FBA → ITGA6/ITGB4 → ERBB2 → MEK → ERK → p90RSK (Huang et al. 2024, Cell Host Microbe, DOI 10.1016/j.chom.2024.07.001). No LPS enzyme or dedicated adhesin effectors are characterized for P. stomatis in the current literature; FBA is the sole validated virulence factor.
 Gemella morbillorum	LPS_biosynthesis_enzyme	NA	NA	NA	bacterial_LPS_structural_placeholder	NA	NA
 Gemella morbillorum	adhesin	NA	NA	NA	bacterial_adhesin_placeholder	NA	NA
 Dialister pneumosintes	LPS_biosynthesis_enzyme	NA	NA	NA	bacterial_LPS_structural_placeholder	NA	NA
@@ -40,10 +41,12 @@ Dialister pneumosintes	adhesin	NA	NA	NA	bacterial_adhesin_placeholder	NA	NA
 #   "H2B variants" may refer to multiple paralogs (H2BC4, H2BC5, H2BC11, etc.).
 #   Expand to full variant list and verify accessions before PPI queries.
 #
-# Bacterial LPS/adhesin placeholders (P. stomatis, G. morbillorum, D. pneumosintes):
-#   All three entries are scaffolds only. Specific gene products (e.g. FadA-like
+# Bacterial LPS/adhesin placeholders (G. morbillorum, D. pneumosintes):
+#   Both entries are scaffolds only. Specific gene products (e.g. FadA-like
 #   adhesins, Lpx-family LPS enzymes) must be identified via genome annotation
 #   (NCBI RefSeq) and literature before ncbi_protein_id or source_pmid can be filled in.
+#   Note: P. stomatis scaffolds were replaced by the experimentally characterized
+#   FBA entry (E0E2E9 / EFM64912.1) based on Huang et al. 2024 (PMID 39059397).
 #
 # All source_pmid fields for human proteins set to NA: a systematic PubMed search
 #   linking each host protein to eoCRC/CRC and to the four bacterial species is
