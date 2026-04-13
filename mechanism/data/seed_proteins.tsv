@@ -8,8 +8,8 @@ Homo sapiens	RELA	Q04206	NA	NA	NF-kB_axis_node	NA	NA
 Homo sapiens	NFKB1	P19838	NA	NA	NF-kB_axis_node	NA	NA
 Homo sapiens	IKBKB	O14920	NA	NA	NF-kB_axis_node	NA	NA
 Homo sapiens	CEBPB	P17676	NA	NA	inflammation_TF	NA	NA
-Homo sapiens	SAA1	NA	NA	NA	acute_phase_protein	NA	NA
-Homo sapiens	IL17C	NA	NA	NA	proinflammatory_cytokine	NA	NA
+Homo sapiens	SAA1	P0DJI8	NA	NA	acute_phase_protein	41850426	Serum amyloid A-1 protein; reviewed Swiss-Prot (SAA1_HUMAN), 122 aa. Canonical SAA1 — only one reviewed human SAA1 entry exists. Note: P02763 (flagged as a candidate in earlier notes) is ORM1/alpha-1-acid glycoprotein 1, not SAA1; that candidate was erroneous. P0DJI9 is the closely related paralog SAA2; the old accessions P02735–P02737 predate the SAA1/SAA2 split and have been absorbed into P0DJI9 (SAA2). SAA1 is the direct downstream effector transcriptionally induced by the P. micra SirTM → CEBPβ axis (Chang et al. 2026, Figure 6).
+Homo sapiens	IL17C	Q9P0M4	NA	NA	proinflammatory_cytokine	41850426	Interleukin-17C; reviewed Swiss-Prot (IL17C_HUMAN), 197 aa. Distinct cytokine from IL17A/B/D/E/F; no unusual paralog merges. Downstream transcriptional target induced by the P. micra SirTM → CEBPβ → SAA1 axis in colonocytes (Chang et al. 2026, Figure 7).
 Homo sapiens	CXCL8	P10145	NA	NA	chemokine	NA	NA
 Homo sapiens	CXCR1	P25024	NA	NA	chemokine_receptor	NA	NA
 Homo sapiens	CXCR2	P25025	NA	NA	chemokine_receptor	NA	NA
@@ -21,23 +21,26 @@ Homo sapiens	DNMT3B	Q9UBC3	NA	NA	epigenetic_methyltransferase	NA	NA
 Homo sapiens	APC	P25054	NA	NA	tumor_suppressor	NA	NA
 Homo sapiens	MLH1	P40692	NA	NA	DNA_mismatch_repair	NA	NA
 Homo sapiens	CDKN2A	P42771	NA	NA	cell_cycle_inhibitor	NA	NA
-Homo sapiens	H2BC4	NA	NA	NA	histone_H2B_variant	NA	NA
+Homo sapiens	H2BC4	P62807	NA	NA	histone_H2B_substrate_SirTM	41850426	Histone H2B type 1-C/E/F/G/I; reviewed Swiss-Prot (H2B1C_HUMAN), 126 aa. Composite entry: five genes (H2BC4, H2BC6, H2BC7, H2BC8, H2BC10 — formerly HIST1H2BC/E/F/G/I under pre-2022 HGNC nomenclature) encode an identical 126-aa protein, all collapsed into P62807. Used here as the representative canonical H2B for the SirTM substrate because: (a) P62807 is the most-cited Swiss-Prot H2B reference; (b) Chang et al. 2026 used a pan-H2B antibody (Proteintech 15857-1-AP) recognizing a shared epitope, so the exact paralog ADP-ribosylated by SirTM in vivo is ambiguous — P62807 is a valid representative node. If paralog specificity is resolved in future work, expand to individual H2BC* entries.
 Parvimonas micra	SirTM	NA	WP_029950202.1	T262_RS0106475	bacterial_effector_ADP-ribosyltransferase	41850426	WP_029950202.1 (locus tag T262_RS0106475 in P. micra strain A293) is the reference strain ortholog of Gene_1539 in P. micra strain Pm-42, which was experimentally characterized by Chang et al. 2026 as an ADP-ribosyltransferase (SirTM) that modifies histone H2B in human colonocytes and drives colorectal cancer progression via the CEBPβ/SAA1/IL-17C pathway. Gene identity confirmed by exact match of forward qPCR primer 1539-F within the CDS and 20/22 match of reverse primer 1539-R within the CDS (primers from Chang et al. Supplementary Table S1). The protein is 97.9-100% conserved at the amino acid level across assembled P. micra strains (BLAST vs nr). Note: NCBI auto-annotation labels this protein as a SIR2-family deacylase based on domain prediction, but Chang et al. demonstrated experimentally that it lacks deacetylase activity and functions solely as an ADP-ribosyltransferase (Chang et al. 2026, Figure 5C).
 Peptostreptococcus stomatis	FBA	E0E2E9	EFM64912.1	HMPREF0634_1279	bacterial_adhesin_surface_moonlighting	39059397	Fructose-1,6-bisphosphate aldolase class II (gene fba); 307 aa; unreviewed TrEMBL. Surface-displayed moonlighting glycolytic enzyme that acts as the sole characterized virulence factor of P. stomatis. Binds human integrins ITGA6/ITGB4 on colonocyte surface, activating ERBB2-MEK-ERK-p90RSK signaling and driving CRC progression and RTK-inhibitor resistance. Strain: DSM 17678 (HMP draft genome, BioProject PRJNA34073). Full cascade: FBA → ITGA6/ITGB4 → ERBB2 → MEK → ERK → p90RSK (Huang et al. 2024, Cell Host Microbe, DOI 10.1016/j.chom.2024.07.001). No LPS enzyme or dedicated adhesin effectors are characterized for P. stomatis in the current literature; FBA is the sole validated virulence factor.
 Homo sapiens	TLR4	O00206	NA	NA	innate_immune_PRR_LPS_receptor	27876571	Toll-like receptor 4; reviewed Swiss-Prot, 839 aa. Canonical pattern-recognition receptor for gram-negative bacterial LPS. Added to complete the innate-immunity / NF-kB arm of the host subnetwork; justified by the presence of LPS-bearing gram-negative organisms (including Fusobacterium nucleatum) in the eoCRC cohorts. Yang et al. 2017 (PMID 27876571, Gastroenterology) directly demonstrated F. nucleatum activation of TLR4 -> MYD88 -> NF-kB -> miR-21 in CRC cells and mouse tumors. TLR4 is a direct PPI partner of MYD88 and bridges gram-negative microbial signals to the IKBKB/NFKB1/RELA nodes already in this seed list.
 Homo sapiens	MYD88	Q99836	NA	NA	TLR_adapter_NFkB_pathway	27876571	Myeloid differentiation primary response protein 88; reviewed Swiss-Prot, 296 aa. Canonical TLR4 cytoplasmic adaptor; direct PPI partner of TLR4 (DD-domain interaction) and of IRAK4, linking TLR4 activation to TRAF6 -> IKBKB -> NF-kB signaling. Added alongside TLR4 to make the innate-immunity arm of the host network structurally complete. Same Yang et al. 2017 source (PMID 27876571) explicitly names the TLR4 -> MYD88 -> NF-kB axis.
 # --- UNCERTAIN / FLAGGED ENTRIES ---
-# SAA1 (Homo sapiens): UniProt left as NA. Candidate accessions are P0DJI8 and P02763
-#   (both annotated as SAA1_HUMAN in different UniProt releases); verify current
-#   canonical entry before querying.
+# SAA1 (Homo sapiens): Resolved 2026-04-12. Canonical entry is P0DJI8 (SAA1_HUMAN,
+#   122 aa, reviewed). Note: P02763 was an erroneous candidate — it is ORM1
+#   (alpha-1-acid glycoprotein 1), unrelated to SAA1. P0DJI9 is SAA2 (paralog).
+#   Old accessions P02735–P02737 predate the SAA1/SAA2 split and map to P0DJI9.
 #
-# IL17C (Homo sapiens): Candidate UniProt Q9P0M4 (IL17C_HUMAN) — not verified against
-#   live UniProt; leave as NA until confirmed.
+# IL17C (Homo sapiens): Resolved 2026-04-12. Canonical entry is Q9P0M4 (IL17C_HUMAN,
+#   197 aa, reviewed). No paralog ambiguity.
 #
-# H2BC4 (Homo sapiens): H2B variants have complex, frequently revised nomenclature.
-#   Candidate accession P62807 (H2BC4_HUMAN / H2B type 1-J), but the user-specified
-#   "H2B variants" may refer to multiple paralogs (H2BC4, H2BC5, H2BC11, etc.).
-#   Expand to full variant list and verify accessions before PPI queries.
+# H2BC4 (Homo sapiens): Resolved 2026-04-12. Using P62807 (H2B1C_HUMAN, 126 aa,
+#   reviewed) as the representative canonical H2B node. P62807 is a composite entry
+#   covering five genes with identical sequence (H2BC4/6/7/8/10; formerly HIST1H2BC/
+#   E/F/G/I). Paralog specificity of SirTM ADP-ribosylation is unresolved in Chang
+#   et al. 2026 (pan-H2B antibody used); P62807 is a valid representative. Expand to
+#   individual paralogs if paralog-level evidence emerges.
 #
 # Gemella morbillorum EXCLUDED from PPI network: no virulence factor has been
 #   experimentally characterized in an intestinal or colonocyte context. The organism
