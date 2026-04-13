@@ -10,6 +10,7 @@ IKBKB	Homo sapiens	seed_human	NF-kB_axis_node	O14920	NA	NA	NA	NA
 CEBPB	Homo sapiens	seed_human	inflammation_TF	P17676	NA	NA	NA	NA
 SAA1	Homo sapiens	seed_human	acute_phase_protein	P0DJI8	NA	41850426	NA	NA
 IL17C	Homo sapiens	seed_human	proinflammatory_cytokine	Q9P0M4	NA	41850426	NA	NA
+IL17RA	Homo sapiens	seed_human	host_cytokine_receptor	Q96F46	NA	21993849	NA	NA
 CXCL8	Homo sapiens	seed_human	chemokine	P10145	NA	NA	NA	NA
 CXCR1	Homo sapiens	seed_human	chemokine_receptor	P25024	NA	NA	NA	NA
 CXCR2	Homo sapiens	seed_human	chemokine_receptor	P25025	NA	NA	NA	NA
