@@ -1,0 +1,6 @@
+organism	tax_id	seeds_input	seeds_mapped	n_nodes	n_edges	failed_mapping
+Homo sapiens	9606	21	21	31	160	none
+Parvimonas micra	33033	1	0	0	0	SirTM
+Parvimonas stomatis	341694	2	0	0	0	LPS_biosynthesis_enzyme; adhesin
+Gemella morbillorum	29390	2	0	0	0	LPS_biosynthesis_enzyme; adhesin
+Dialister pneumosintes	39950	2	0	0	0	LPS_biosynthesis_enzyme; adhesin

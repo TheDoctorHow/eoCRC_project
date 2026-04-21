@@ -31,3 +31,6 @@ path_filtered.csv
 results/networks/*.rds
 results/networks/*.csv
 !results/networks/.gitkeep
+
+# STRING per-taxid cache directories (large downloads, reproducible)
+mechanism/results/string_cache_*/
