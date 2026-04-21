@@ -43,3 +43,4 @@ eocrc_samples_cmd.tsv
 *.cys
 micom_analysis/
 mechanism/scripts/find_sirtm_*
+.claude/
